@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html lang="en">
+  <%- include("partials/head", {title:"Registro de usuario", css:"register"}) %>
+<body>
+  <%- include("partials/header") %>
+
+
+    <main>
+        <div class="container">
+            <form id="register-form" action="/user/register" method="POST" onsubmit="return validateForm()">
+              <label for="name">Nombre:</label>
+              <input type="text" id="name" name="name" class="<%= locals.errors && errors.name ? "danger" : null %>" value="<%= locals.oldData ? oldData.name : null %>">
+              <% if (locals.errors && errors.name) { %>
+                <div class="corrections"><%= errors.name.msg  %></div>
+              <% } %>
+              <label for="email">Correo electrónico:</label>
+              <input type="email" id="email" name="email" class="<%= locals.errors && errors.email ? "danger" : null %>" value="<%= locals.oldData ? oldData.email : null %>">
+              <% if (locals.errors && errors.email) { %>
+                <div class="corrections"><%= errors.email.msg  %></div>
+              <% } %>
+              <label for="acoutnType">Tipo de cuenta:</label>
+              <select id="acoutnType" name="accountType" >
+                <option value="">Elige un perfil</option>
+                <option value="Drop-Prov" <%= locals.oldData && "Drop-Prov" === oldData.accountType ? "selected" : null %> >Dropshipper/Proveedor</option>
+                <option value="Importer/exporter" <%= locals.oldData && "Importer/exporter" === oldData.accountType ? "selected" : null %>>Importador / Exportador</option>
+              </select>
+              <% if (locals.errors && errors.accountType) { %>
+                <div class="corrections"><%= errors.accountType.msg  %></div>
+              <% } %>
+
+
+              <label for="countrySelect">Pais</label>
+              <select id="countrySelect" name="countrySelect"  >
+                <!-- otra opcion es poner disabled -->
+                <option value="">Elige un pais</option>
+
+              <% 
+                let countries = [
+  { value: "aus", label: "Australia" },
+  { value: "ar", label: "Argentina" },
+  { value: "br", label: "Brasil" },
+  { value: "ca", label: "Canadá" },
+  { value: "ch", label: "Chile" },
+  { value: "co", label: "Colombia" },
+  { value: "es", label: "España" },
+  { value: "ingl", label: "Inglaterra" },
+  { value: "mx", label: "México" },
+  { value: "pa", label: "Panamá" },
+  { value: "port", label: "Portugal" },
+  { value: "usd", label: "Estados Unidos" }
+];%>
+                <% countries.forEach(country => {%>
+                   <option value="<%= country.value %>" <%= locals.oldData && country.value === oldData.countrySelect ? "selected" : null %>> <%= country.label%> </option>
+                   <% }); %>
+
+                  </select>
+                  <!-- Acordarse de poner esto despues del cierre del select, de lo contrario la opcion primera por defecto te la va a tomar como una opcion valida -->
+                  <% if (locals.errors && errors.countrySelect) { %>
+                   <div class="corrections"><%= errors.countrySelect.msg  %></div>
+                 <% } %>
+
+              <label for="password">Contraseña:</label>
+              <input type="password" id="password" name="password" class="<%= locals.errors && errors.password ? "danger" : null %>" value="<%= locals.oldData ? oldData.password : null %>" >
+              <% if (locals.errors && errors.password) { %>
+                <div class="corrections"><%= errors.password.msg  %></div>
+              <% } %>
+              <label for="confirmPassword">Confirmar Contraseña:</label>
+              <input type="password" id="confirmPassword" name="confirmPassword" class="<%= locals.errors && errors.confirmPassword ? "danger" : null %>" value="<%= locals.oldData ? oldData.confirmPassword : null %>"  >
+              <% if (locals.errors && errors.confirmPassword) { %>
+                <div class="corrections"><%= errors.confirmPassword.msg  %></div>
+              <% } %>
+              <span id="message"></span>
+              <button id="registro" type="submit" class="blue-button">Registrarse</button>
+            </form>
+        </div>
+    </main>
+    
+      <footer>
+        <div class="content-img">
+            <img src="/icons/logo.png" alt="">
+        </div>
+        
+        <div class="content-footer">
+            <ul>
+                <li> <a href="">Trabaja con nosotros</a></li>
+                <li> <a href="">Vacantes</a></li>
+                <li> <a href="">Beneficios</a></li>
+                <li> <a href="">Para Dropshippers</a></li>
+                <li> <a href="">Para Comerciantes en general</a></li>
+                <li> <a href="">Para Desarrolladores</a></li>
+            </ul>
+        </div>
+    </footer>
+    <script>
+    function validateForm() {
+        var password = document.getElementById("password").value;
+        var confirmPassword = document.getElementById("confirmPassword").value;
+        var message = document.getElementById("message");
+        
+        if (password !== confirmPassword) {
+            message.innerHTML = "Las contraseñas no coinciden";
+            return false;
+        } else {
+            message.innerHTML = "";
+            return true;
+        }
+  }
+    </script>
+</body>
+</html>

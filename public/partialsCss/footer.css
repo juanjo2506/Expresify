@@ -1,0 +1,39 @@
+
+  /* Estilos Footer */
+  
+  
+  
+  footer {
+    background-color: #020617;
+    border-top: 1px solid #546390;
+  }
+  
+  footer .content-img {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+  
+  footer img {
+    width: 100px;
+    position: relative;
+    bottom: 3rem;
+  }
+  
+  footer .content-footer ul {
+    display: flex;
+    justify-content: center;
+  }
+  
+  footer .content-footer ul li {
+    margin: 2rem;
+    margin-bottom: 10rem;
+    list-style: none;
+    justify-content: center;
+  }
+  
+  footer .content-footer ul li a {
+    font-size: 1rem;
+    color: snow;
+    text-decoration: none;
+  } 

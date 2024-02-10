@@ -1,0 +1,204 @@
+:root{
+    --color-expresify: #2668bd;
+    --background-grey: #e0e0e0;
+    --color-texto: #3e3e3e;
+
+}
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    font-family:Verdana, Geneva, Tahoma, sans-serif;
+}
+html{
+    font-size: 62.5%;
+    background-color: var(--body-grey);
+}
+body{
+    font-size: 1.6rem;
+    background-color: #020617;
+    /* background-color: #e1e1e1; */
+}
+/* Estilos headder - barra de navegacion */
+
+header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 20px;
+    background-color: #020617;
+    border-bottom: 1px solid #383e5e;
+    height: 8rem;
+  }
+  
+  .logo img {
+    margin-left: 15rem;
+    width: 130px; /* Ajusta el tamaño según tu logo */
+    /* height: auto; */
+  }
+  
+  nav ul {
+    list-style: none;
+    display: flex;
+  }
+  
+  .opcion {
+    position: relative;
+    padding: 10px;
+    margin-right: 10px;
+    cursor: pointer;
+    color: #6b738a;
+  }
+  
+  .submenu {
+    display: none;
+    position: absolute;
+    top: 100%;
+    left: 0;
+    width: 15rem;
+    height: auto;
+    border-radius: 1.2rem;
+    border: 1px solid #192a4a77;
+    background-color: #212534;
+    padding: 10px;
+    box-shadow: 0 4px 9px rgba(20, 42, 83, 0.8);
+  }
+  
+  .opcion:hover .submenu {
+    display: block;
+  }
+  
+  .submenu li a{
+    text-decoration: none;
+    color: #d3d4d7;
+  }
+  
+  .submenu li{
+    margin: 1.9rem;
+  }
+  
+  /* Estilos para los botones de autenticación */
+  
+  .auth-buttons{
+    display: flex;
+    margin-right: 10rem;
+  }
+  .auth-buttons button {
+    margin-left: 10px;
+    padding: 8px 15px;
+    width: 10;
+    height: auto;
+    font-size: 17px;
+    color: #fff;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+  }
+  
+  .auth-buttons .login-btn{
+    background-color: #1e1e1e;
+  }
+  
+  .auth-buttons .register-btn{
+    background-color: #470086;
+  }
+  
+  
+  .auth-buttons .login-btn:hover {
+    background-color: #404040;
+    transition: 0.3s;
+  }
+  
+  .auth-buttons .register-btn:hover{
+    background-color: #926fb1;
+    transition: 0.3s;
+  }
+
+  .auth-buttons .img-app a img{
+    width: 23px;
+    margin: 10px;
+  }
+  
+
+/*ESTILOS DEL FORMULARIO */
+
+.container {
+    background-color: #0c1129;
+    color: #a1afd7;
+    width: 400px;
+    margin: 50px auto;
+    padding: 20px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+  }
+  
+  form {
+    display: flex;
+    flex-direction: column;
+  }
+  
+  label {
+    margin-bottom: 6px;
+  }
+
+  button {
+    margin-bottom: 15px;
+    padding: 8px;
+    border: none;
+    border-radius: 3px;
+  }
+
+
+  input{
+    margin-bottom: 15px;
+    padding: 8px;
+    border-radius: 8px;
+    border: 1px solid #272727;
+    background-color: #e8eaee;
+  }
+  
+  .blue-button {
+    background-color: #007bff;
+    color: #fff;
+    cursor: pointer;
+  }
+
+
+
+/* ESTILOS FOOTER */
+
+footer{
+    margin-top: 15rem;
+    background-color: #020617;
+    border-top: 1px solid #546390;
+}
+
+.content-img{
+    display: flex;
+    justify-content: center;
+}
+
+footer img{
+    width: 10rem;
+    position: relative;
+    /* left: 79rem; */
+    bottom: 6rem;
+    text-align: center;
+}
+
+footer .content-footer ul{
+    display: flex;
+    justify-content: center;
+}
+
+footer .content-footer ul li{
+    margin: 3rem;
+    margin-bottom: 10rem;
+    list-style: none;
+    justify-content: center;
+}
+
+footer .content-footer ul li a{
+    color: snow;
+    text-decoration: none;
+}

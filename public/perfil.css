@@ -1,0 +1,148 @@
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #f4f4f4;
+    color: #333;
+}
+main{
+    margin-bottom: 10rem;
+}
+main .container  .user-img{
+    width: 160px;
+    border-radius: 10rem;
+}
+
+main .container{
+    margin: 5rem;
+    
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+
+main .info{
+    align-items: center;
+    
+}
+
+h1 {
+    text-align: center;
+    margin-top: 20px;
+}
+
+.formCreate {
+    width: 50%;
+    margin: 20px auto;
+    padding: 20px;
+    background-color: #fff;
+    border-radius: 5px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+}
+
+label {
+    display: block;
+    margin-bottom: 5px;
+}
+
+input[type="text"],
+input[type="number"],
+input[type="file"] {
+    width: calc(100% - 12px);
+    padding: 8px;
+    margin-bottom: 10px;
+    border: 1px solid #ccc;
+    border-radius: 3px;
+}
+
+button[type="submit"] {
+    padding: 10px 20px;
+    background-color: #28a745;
+    color: #fff;
+    border: none;
+    border-radius: 3px;
+    cursor: pointer;
+}
+
+button[type="submit"]:hover {
+    background-color: #218838;
+}
+
+
+ul {
+    list-style: none;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    /* padding: 0; */
+    margin: 8rem;
+}
+
+
+.products {
+    border-radius: 2rem;
+    width: 30%; /* Ancho del contenedor de cada producto */
+    margin-bottom: 20px;
+    border: 1px solid #ccc;
+    padding: 10px;
+}
+
+.products img {
+    border-radius: 2rem;
+    max-width: 100%;
+    height: auto;
+}
+
+.products h1,
+.products p,
+.products h3 {
+    margin: 5px 0;
+}
+
+.products h3{
+    color: #28a745;
+}
+
+.products .btn {
+    color: white;
+    border: none;
+    padding: 5px 10px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    margin: 5px;
+    cursor: pointer;
+    font-weight: bolder;
+}
+
+.products .btn.edit {
+    background-color: #28a745;
+}
+
+.products .edit{
+    font-size: 1rem;
+}
+
+
+
+.products a{
+    color: #161616;
+    text-decoration: none;
+    justify-content: center;
+    font-size: 1.5rem;
+    font-weight: bold;
+}
+
+
+
+.products .elim{
+    background-color: red;
+}
+
+.products .edit{
+    background-color: blue;
+    color: #ffffff;
+    padding: 5px 10px;
+}

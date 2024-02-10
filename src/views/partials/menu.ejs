@@ -1,0 +1,56 @@
+<link rel="stylesheet" href="/partialsCss/menu.css">
+<header>
+    <button id="menu-toggle" class="menu-toggle">&#9776; Menú</button>
+  </header>
+  <div class="container">
+    <aside id="sidebar">
+      <div class="profile">
+        <img src="/img/shopify.png" alt="Foto de perfil">
+        <h2>Daniel Contreras Millan</h2>
+        <p>Dropshipper importador en colombia</p>
+      </div>
+      <nav class="menu">
+        <ul>
+          <li class="title-li"><span><img src="/iconsApp/home.png" alt=""></span><a href="#">Perfil</a>
+          </li>
+          <li class="title-li"><span><img src="/iconsApp/dashboard.png" alt=""></span><a href="#">Dashboard</a>
+            <ul class="submenu">
+              <li class="other-li"><a href="#">Tus mas vendidos</a></li>
+              <li class="other-li"><a href="#">Estadisticas</a></li>
+            </ul>
+          </li>
+          <li class="title-li"><span><img src="/iconsApp/cash.png" alt=""></span><a href="#">Wallet</a>
+            <ul class="submenu">
+              <li class="other-li"><a href="#">Movimientos</a></li>
+              <li class="other-li"><a href="#">Retirar saldo</a></li>
+            </ul>
+          </li>
+          <li class="title-li"><span><img src="/iconsApp/settings.png" alt=""></span><a href="#">Configuracion</a>
+            <ul class="submenu">
+              <li class="other-li"><a href="#">Mi plan</a></li>
+              <li class="other-li"><a href="#">Configurar perfil</a></li>
+            </ul>
+          </li>
+        </ul>
+      </nav>
+    </aside>
+  </div>
+
+  <script>
+
+    const submenuItems = document.querySelectorAll('.menu ul li');
+
+    submenuItems.forEach(item => {
+      item.addEventListener('click', () => {
+        const submenu = item.querySelector('.submenu');
+        submenu.classList.toggle('show');
+      });
+    });
+
+    const menuToggle = document.getElementById('menu-toggle');
+    const sidebar = document.getElementById('sidebar');
+
+    menuToggle.addEventListener('click', () => {
+      sidebar.classList.toggle('active');
+});
+  </script>

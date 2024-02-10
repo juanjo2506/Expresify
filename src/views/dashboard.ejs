@@ -1,0 +1,285 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="/dashboard.css">
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+</head>
+<body>
+    <%- include("partials/menu.ejs") %>
+
+    <main>
+        <section class="cardsMetrics">
+            <div class="contentCards">
+
+
+                <div class="box box1">
+                    <h1>$ 3,235 <span><img style="width: 30px; margin-left: 2rem;" src="/iconsApp/ordenes.png" alt=""></span></h1>
+                    <p>Ordenes totales</p>
+                    <div style="background-color: #372cd5ba;" class="colorCardText">
+                    </div>
+                </div>
+
+
+                <div class="box box2">
+                    <h1>$ 16,250,000 <span><img style="width: 30px; margin-left: 2rem;" src="/iconsApp/facturacion.png" alt=""></span></h1>
+                    <p>Facturacion</p>
+                    <div style="background-color: #4083d5b7;" class="colorCardText">
+                    </div>
+                </div>
+
+
+                <div class="box box3">
+                    <h1>$ 8,956,000 <span><img style="width: 30px; margin-left: 2rem;" src="/iconsApp/beneficios.png" alt=""></span></h1>
+                    <p>Beneficios netos</p>
+                    <div style="background-color: #ffa600c1;" class="colorCardText">
+                    </div>
+                </div>
+
+
+                <div class="box box4">
+                    <h1>$ 968 <span><img style="width: 30px; margin-left: 2rem;" src="/iconsApp/visitas.png" alt=""></span></h1>
+                    <p>Visitas</p>
+                    <div style="background-color: #e0600ab8;" class="colorCardText">
+                    </div>
+                </div>
+
+
+            </div>
+        </section>
+
+
+        <section class="mainChartCustoms">
+            <section class="mainChart">
+                <div class="chartComplete">
+                    <div class="titleMainChart">
+                        <h1>Tus ventas en el tiempo</h1>
+                    </div>
+        
+                    <div class="containerChartOne">
+                        <div class="chartBarOne" id="chartBarOne">
+                            <canvas class="columnChart" id="myChart"></canvas>
+                        </div>
+                    </div>
+                </div>
+            </section>
+            <section class="boxCustomerMain">
+                <div class="customerBox">
+                    <div class="titleCustom">
+                        <h1>Clientes frecuentes</h1>
+                    </div>
+                    <div class="customer customer1">
+                        <img src="/iconsApp/user-pic.png" alt="">
+                        <div class="textCustomer">
+                            <h1>Lorem ipsum dolor sit.</h1>
+                            <p>Mail: user@gmail.com</p>
+                        </div>
+                    </div>
+    
+                    <div class="customer customer2">
+                        <img src="/iconsApp/user-pic.png" alt="">
+                        <div class="textCustomer">
+                            <h1>Lorem ipsum dolor sit.</h1>
+                            <p>Mail: user@gmail.com</p>
+                        </div>
+                    </div>
+    
+                    <div class="customer customer3">
+                        <img src="/iconsApp/user-pic.png" alt="">
+                        <div class="textCustomer">
+                            <h1>Lorem ipsum dolor sit.</h1>
+                            <p>Mail: user@gmail.com</p>
+                        </div>
+                    </div>
+    
+    
+                    <div class="customer customer4">
+                        <img src="/iconsApp/user-pic.png" alt="">
+                        <div class="textCustomer">
+                            <h1>Lorem ipsum dolor sit.</h1>
+                            <p>Mail: user@gmail.com</p>
+                        </div>
+                    </div>
+    
+    
+                    <div class="customer customer5">
+                        <img src="/iconsApp/user-pic.png" alt="">
+                        <div class="textCustomer">
+                            <h1>Lorem ipsum dolor sit.</h1>
+                            <p>Mail: user@gmail.com</p>
+                        </div>
+                    </div>
+    
+    
+                    <div class="customer customer6">
+                        <img src="/iconsApp/user-pic.png" alt="">
+                        <div class="textCustomer">
+                            <h1>Lorem ipsum dolor sit.</h1>
+                            <p>Mail: user@gmail.com</p>
+                        </div>
+                    </div>
+    
+    
+                    <div class="customer customer7">
+                        <img src="/iconsApp/user-pic.png" alt="">
+                        <div class="textCustomer">
+                            <h1>Lorem ipsum dolor sit.</h1>
+                            <p>Mail: user@gmail.com</p>
+                        </div>
+                    </div>
+    
+    
+                    <div class="customer customer8">
+                        <img src="/iconsApp/user-pic.png" alt="">
+                        <div class="textCustomer">
+                            <h1>Lorem ipsum dolor sit.</h1>
+                            <p>Mail: user@gmail.com</p>
+                        </div>
+                    </div>
+    
+    
+                    <div class="customer customer9">
+                        <img src="/iconsApp/user-pic.png" alt="">
+                        <div class="textCustomer">
+                            <h1>Lorem ipsum dolor sit.</h1>
+                            <p>Mail: user@gmail.com</p>
+                        </div>
+                    </div>
+    
+    
+                    <div class="customer customer10">
+                        <img src="/iconsApp/user-pic.png" alt="">
+                        <div class="textCustomer">
+                            <h1>Lorem ipsum dolor sit.</h1>
+                            <p>Mail: user@gmail.com</p>
+                        </div>
+                    </div>
+                </div>
+            </section>
+        </section>
+        <section class="chartsTypes">
+            <div class="listchart">
+                <div class="chartType chartType1">
+                    <h1>Productos mas Vendidos</h1>
+                    <canvas id="chart1"></canvas>
+                </div>
+    
+                <div class="chartType chartType2">
+                    <h1>Dias con mas actividad</h1>
+                    <canvas id="chart2"></canvas>
+                </div>
+    
+                <div class="chartType chartType3">
+                    <h1>Meses con mas actividad</h1>
+                    <canvas id="chart3"></canvas>
+                </div>
+            </div>
+
+        </section>
+    </main>
+
+    <%- include("partials/footer.ejs") %>
+
+    <script>
+        document.addEventListener('DOMContentLoaded', function () {
+          var ctx = document.getElementById('myChart').getContext('2d');
+          var myChart = new Chart(ctx, {
+            type: 'bar',
+            data: {
+              labels: ['Lunes', 'Marte', 'Miercoles', 'Jueves', 'Viernes', 'Sabado', 'Domingo'],
+              datasets: [{
+                label: 'Total de ventas',
+                data: [12, 19, 3, 5, 2, 8, 6],
+                backgroundColor: [
+                  'rgb(0, 0, 142',
+                  'rgb(40, 40, 182)',
+                  'rgb(40, 99, 182)',
+                  'rgb(12, 90, 199)',
+                  'rgb(12, 149, 199)',
+                  'rgb(121, 52, 218)',
+                  'rgb(121, 52, 218)',
+                ],
+                borderRadius: 60,
+                barThickness: 20,
+              },
+              {
+            label: 'Rentabilidad',
+            data: [8, 12, 6, 10, 4, 7, 8],
+            type: 'line',
+            fill: false,
+            borderColor: 'rgb(255, 157, 0)',
+            borderWidth: 2,
+            pointRadius: 5,
+            tension: 0.4,
+          }]
+            },
+            options: {
+              scales: {
+                y: {
+                  beginAtZero: true
+                }
+              }
+            }
+          });
+        });
+
+
+
+
+
+
+
+        // Charts area y donut - 3 charts de seguido
+
+    const data1 = {
+        labels: ['Grifo de lujo', 'Limpiador de vidrios magico', 'Amuleto de la suerte'],
+        datasets: [{
+            data: [230, 178, 30],
+            backgroundColor: ['#0e0078', '#3835e5', '#b035e5']
+        }]
+    };
+
+    const data2 = {
+        labels: ['Lunes', 'Martes', 'Miercoles', 'Jueves', 'Viernes', 'Sabado', 'Domingo'],
+        datasets: [{
+            data: [30, 5, 30, 10, 5, 5, 10, 10],
+            backgroundColor: ['#0e0078', '#b035e5', '#3835e5', '#36c1e1', '#9f4cbd', '#d3169a', '#6e71f4' ]
+        }]
+    };
+
+    const data3 = {
+        labels: ['Red', 'Blue', 'Yellow'],
+        datasets: [{
+            data: [15, 35, 50],
+            backgroundColor: ['#FF6384', '#36A2EB', '#FFCE56']
+        }]
+    };
+
+    // Configuración de los gráficos
+    const options = {
+        cutoutPercentage: 70,
+    };
+
+    // Creación de los gráficos
+    new Chart(document.getElementById('chart1'), {
+        type: 'doughnut',
+        data: data1,
+        options: options
+    });
+
+    new Chart(document.getElementById('chart2'), {
+        type: 'doughnut',
+        data: data2,
+        options: options
+    });
+
+    new Chart(document.getElementById('chart3'), {
+        type: 'doughnut',
+        data: data3,
+        options: options
+    });
+      </script>
+</body>
+</html>

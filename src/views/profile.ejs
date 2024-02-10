@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Agregar Producto</title>
+    <link rel="stylesheet" href="/perfil.css">
+</head>
+<body>
+
+  <%- include("partials/menu.ejs") %>
+  <main>
+    <section class="container">
+      <div>
+        <img class="user-img" src="/iconsApp/user-pic.png" alt="">
+      </div>
+      <div class="info">
+        <div class="box user-name">
+          <h1>User Name</h1>
+        </div>
+
+        <div class="box number-phone">
+          <h1>33333333</h1>
+        </div>
+      </div>
+    </section>
+    <h1>Agregar Nuevo Producto</h1>
+
+    <!-- Agregar el metodo POST cuando sea necesario -->
+    <form class="formCreate" action="/user/add-product" method="post" enctype="multipart/form-data">
+        <label for="title">Título:</label>
+        <input class="inp title" type="text" id="title" name="productName" required><br>
+        <label for="description">Descripción:</label>
+        <input class="inp descrip" type="text" id="description" name="productDescription" required><br>
+        <label for="price">Precio:</label>
+        <input class="inp price" type="number" id="price" name="price" step="0.01" required><br>
+        <label for="productImage">Imagen:</label>
+        <input class="inp img" type="file" id="productImage" name="productImage" required><br>
+        <button type="submit">Agregar Producto</button>
+    </form>
+
+
+    <section>
+      <ul>
+        <% products.forEach(product => { %>
+          <section class="products">
+              <!-- Cambio en el enlace para visualizar detalles del producto -->
+              <a href="/products/<%= product.id %>">
+                  <li>
+                      <img src="/uploads/<%= product.image %>" alt="<%= product.title %> Image">
+                      <h1><%= product.name %></h1>
+                      <!-- <p><%= product.description %></p> -->
+                      <h3>$<%= product.price %> USD</h3>
+                      <!-- Botones de eliminar y editar -->
+                      <form action="/products/<%= product.id %>?_method=DELETE" method="POST" style="display: inline;">
+                          <button class="btn elim" type="submit">Eliminar</button>
+                      </form>
+                      <a class="edit" href="/products/<%= product.id %>/edit" class="btn">Editar</a>
+                  </li>
+              </a>
+          </section>
+        <% }) %>
+    </ul>
+    </section>
+  </main>
+
+<%- include("partials/footer.ejs") %>
+</body>
+</html>

@@ -1,0 +1,409 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: sans-serif;
+    /* border: 1px solid red; */
+  }
+  
+  /* Estilos para el menú desplegable */
+  header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 20px;
+    background-color: #020617;
+    border-bottom: 1px solid #383e5e;
+    height: 4rem;
+  }
+  
+  .sticky-nav{
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    padding: 15px;
+    transition: top 0.3s ease-in-out;
+    z-index: 1000;
+  }
+  
+  .logo img {
+    margin-left: 15rem;
+    width: 130px; /* Ajusta el tamaño según tu logo */
+    /* height: auto; */
+  }
+  
+  nav ul {
+    list-style: none;
+    display: flex;
+  }
+  
+  .opcion {
+    position: relative;
+    padding: 10px;
+    margin-right: 10px;
+    cursor: pointer;
+    color: #6b738a;
+  }
+  
+  .submenu {
+    display: none;
+    position: absolute;
+    top: 100%;
+    left: 0;
+    width: 15rem;
+    height: auto;
+    border-radius: 1.2rem;
+    border: 1px solid #192a4a77;
+    background-color: #212534;
+    padding: 10px;
+    box-shadow: 0 4px 9px rgba(20, 42, 83, 0.8);
+  }
+  
+  .opcion:hover .submenu {
+    display: block;
+  }
+  
+  .submenu li a{
+    text-decoration: none;
+    color: #d3d4d7;
+  }
+  
+  .submenu li{
+    margin: 1.9rem;
+  }
+  
+  /* Estilos para los botones de autenticación */
+  
+  .auth-buttons{
+    display: flex;
+    margin-right: 10rem;
+  }
+  .auth-buttons button {
+    margin-left: 10px;
+    padding: 8px 15px;
+    width: 8rem;
+    height: 2.5rem;
+    font-size: 17px;
+    color: #fff;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+  }
+  
+  .auth-buttons .login-btn{
+    background-color: #1e1e1e;
+  }
+  
+  .auth-buttons .register-btn{
+    background-color: #470086;
+  }
+  
+  
+  .auth-buttons .login-btn:hover {
+    background-color: #404040;
+    transition: 0.3s;
+  }
+  
+  .auth-buttons .register-btn:hover{
+    background-color: #926fb1;
+    transition: 0.3s;
+  }
+
+  .auth-buttons .img-app a img{
+    width: 23px;
+    margin: 10px;
+  }
+  
+  
+  
+  
+  
+  
+  /* Estilos main */
+  
+  
+  main{
+    background-color: #020617;
+  }
+  
+  main .presentation{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+  }
+  
+  
+  main .presentation div{
+    margin: 3rem;
+    text-align: center;
+  }
+  main .presentation div h1{
+    font-family: system-ui;
+    margin-left: 15rem;
+    margin-right: 15rem;
+    font-size: 5rem;
+    line-height: 4rem;
+    color: #bdbdbd;
+  }
+  
+  main .presentation div p{
+    font-size: 1.5rem;
+    margin-left: 20rem;
+    margin-right: 20rem;
+    margin-top: 3rem;
+    color: #7e84a7;
+  }
+  
+  main .presentation .texter{
+    margin-top: 8rem;
+  }
+  
+  
+  
+  
+  
+  /* Estilos slider */
+  
+  .aliados{
+    display: flex;
+    justify-content: center;
+  }
+  
+  /* .aliados  */
+  
+  .aliados div img{
+    width: 80px;
+  }
+  
+  
+  
+  /* Estilos cards */
+  /* //////////////////Tajetas///////////////////// */
+  
+  main .beneficios-ext{
+    margin-bottom: 5rem;
+  }
+  
+  
+  main .beneficios-ext .container-bnf{
+    display: flex;
+    margin: 5rem;
+  }
+  
+  main .beneficios-ext .container-bnf .box-bnf{
+    margin: 4rem;
+  }
+  
+  
+  main .beneficios-ext .container-bnf img{
+    width: 95%;
+    margin-top: 1rem;
+    border-radius: 30px;
+  }
+  
+  
+  
+  
+  main .beneficios-ext .container-bnf{
+    display: flex;
+    justify-content: center;
+  }
+  
+  main .beneficios-ext .container-bnf .box-bnf{
+   border: 0.5px solid #004574;
+    border-radius: 30px 30px 18px 18px;
+    height: auto;
+    text-align: center;
+    cursor: default;
+    transition: all 400ms ease;
+  }
+  
+  
+  main .beneficios-ext .container-bnf .box-bnf:hover{
+    box-shadow: 5px 5px 10px rgba(14, 47, 126, 0.305);
+    transform: translateY(-3%);
+  }
+  
+  main .beneficios-ext .container-bnf .box-bnf h1{
+    margin: 2rem;
+    color: #b6b6b6;
+  }
+  
+  
+  main .beneficios-ext .container-bnf .box-bnf p{
+    margin: 2rem;
+    text-align: center;
+    color: #b2b3be;
+  }
+  
+  
+  /* /////////////////////////////////////// */
+  
+  
+  
+  
+  /* Estilos boxes */
+  
+  main .servicios{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+  
+  main .servicios .box img{
+    width: 100px;
+    margin: 2rem;
+  }
+  
+  
+  main .servicios .box{
+    display: flex;
+    justify-content: center;
+    margin-bottom: 5rem;
+    background-color: #262b4a;
+    width: 50rem;
+    align-items: center;
+    padding: 2rem;
+    border-radius: 1.1rem;
+    border: 1px solid #8a93c5;
+  }
+  
+  main .servicios .box .text-box{
+    display: flex;
+    flex-direction: column;
+  }
+  
+  
+  main .servicios .box .text-box h1{
+    color: #ccc;
+  }
+  
+  main .servicios .box .text-box p{
+    color: #979cb9;
+  }
+  
+  
+  
+  
+  
+  
+  
+  
+  /* Estiolos Back-blue */
+  
+  
+  main  .tittle-conect{
+    text-align: center;
+    margin-bottom: 5rem;
+    font-size: 3.5rem;
+    margin-left: 10rem;
+    margin-right: 10rem;
+  
+  
+    background: #ccc;
+    background: linear-gradient(#5941f3, rgb(25, 17, 92));
+    font-family: system-ui;
+    line-height: 150%;
+    padding-bottom: 2rem;
+  
+  -webkit-text-fill-color: transparent;
+  -webkit-background-clip: text;
+  }
+  
+  main .img-conected{
+    background-color: #020617;
+    height: 20rem;
+  }
+  
+  main .img-conected .box-master{
+    margin-right: 5rem;
+    margin-left: 5rem;
+    border-radius: 3rem;
+    height: 10rem;
+    display: flex;
+    background-color: #ffffff;
+    box-shadow: 0px 1px 10px rgba(0, 0, 0, 0.2);
+  }
+  
+  main .img-conected .box-master .box img{
+    width: 100px;
+    margin: 8px;
+    margin-left: 4rem;
+  }
+  
+  
+  main .img-conected .box-master .box button{
+    width: 150px;
+    margin-left: 2rem;
+    /* height: 1.5rem; */
+    padding: 5px;
+    font-size: 1.3rem;
+    font-weight: bold;
+    border-radius: 1.3rem;
+    background-color: #2626ff;
+    color: #f7f7f7;
+  }
+  
+  main .img-conected .box-master .box button:hover{
+    transition: 0.2s;
+    background-color: #f1f1f1;
+    color: #2626ff;
+    cursor: pointer;
+  }
+  
+  
+
+/* ////////////////////////////// */
+
+/* mail section */
+
+
+
+.contact-section {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-bottom: 8rem;
+}
+
+.contact-container {
+  border-radius: 1.1rem;
+  text-align: center;
+  border: 1px solid #546390;
+  padding: 20px;
+}
+
+.contact-container h2{
+  font-size: 1.8rem;
+  margin-bottom: 1rem;
+  color: #d2d2d2;
+}
+
+.contact-container p{
+  font-size: 1.1rem;
+  color: #766fb4;
+  margin-bottom: 2rem;
+}
+
+input[type="email"] {
+  border: none;
+  border-radius: 1.1rem;
+  width: 250px;
+  padding: 10px;
+  margin-bottom: 10px;
+}
+
+button {
+  
+  border-radius: 1.1rem;
+  padding: 10px 20px;
+  background-color: #007bff;
+  color: white;
+  border: none;
+  cursor: pointer;
+}
+
+button:hover {
+  background-color: #0056b3;
+}

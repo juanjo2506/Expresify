@@ -1,0 +1,168 @@
+<!DOCTYPE html>
+<html lang="en">
+  <%- include("partials/head", {title:"Expresify", css:"home"}) %>
+<body>
+  <%- include("partials/header") %>
+
+  <main>
+    <section class="presentation">
+
+     <section class="texter">
+      <div class="text-present">
+        <h1>Un aliado para tu nuevo negocio</h1>
+        <p>¡Empieza tu aventura en ventas online hoy mismo y lleva tu negocio a otro nivel!</p>
+    </div>
+     </section>
+
+     <section class="aliados">
+      <div>
+        <img src="/icons/shopify.png" alt="">        
+      </div>
+      <div>
+        <img src="/icons/servientrega.png" alt="">
+      </div>
+      <div>
+        <img src="/icons/woo.png" alt="">
+      </div>
+      <div>
+        <img src="/icons/alibaba.png" alt="">
+      </div>
+      <div>
+        <img src="/icons/dhl.png" alt="">
+      </div>
+     </section>
+  </section>
+    <section class="beneficios-ext">
+      <div class="container-bnf">
+          <div class="box-bnf">
+              <img src="/img/administra.jpg" alt="">
+              <h1>puedes aceptar o rechazar los pedidos generados en tu tienda</h1>
+              <p> Puedes personalizar tu proceso de gestión de pedidos, decidiendo aceptarlos o rechazarlos manualmente, o incluso configurar automatizaciones para aceptar todos los pedidos.</p>
+          </div>
+
+
+          <div class="box-bnf">
+              <img src="/img/ganadores.jpg" alt="">
+              <h1>Explora productos con un enorme potencial para convertirse en ventas exitosas.</h1>
+              <p>Encuentra productos campeones trabajando con proveedores locales o gestiona todo desde nuestra plataforma, haciendo tus propias importaciones para expandir tu catálogo.</p>
+          </div>
+
+
+          <div class="box-bnf">
+              <img src="/img/conversiones.jpg" alt="">
+              <h1>Administra tus ingresos de manera sencilla y segura usando nuestro monedero virtual.</h1>
+              <p>Administra tus ingresos y gastos desde tu monedero virtual. Además, podrás transferir fondos a tu cuenta bancaria sin comisiones cuando desees.</p>
+          </div>
+      </div>
+
+  </section>
+  <section class="servicios">
+    <div class="box-1 box">
+      <img src="/icons/dropshipping.png" alt="">
+      <div class="text-box">
+        <h1>Ser comerciante nunca fue tan sencillo.</h1>
+        <p>Descubre a los mejores proveedores locales o internacionales y trae sus productos a tu ciudad para convertirte en su principal vendedor.</p>
+      </div>
+    </div>
+
+    <div class="box2 box">
+      <div class="text-box">
+        <h1>Comienza tu aventura en el dropshipping sin inversión inicial.</h1>
+        <p>Te ofrecemos el software y proveedores para iniciar tu negocio desde cero. Al principio, aplicamos comisiones, pero luego puedes optar por una tarifa anual. ¡Empieza a capitalizarte hoy mismo!</p>
+      </div>
+      <img src="/icons/inversion.png" alt="">
+    </div>
+
+    <div class="box3 box">
+      <img src="/icons/administracion.png" alt="">
+      <div class="text-box">
+        <h1>Gestiona tus almacenes y productos de manera eficiente para asegurar un flujo de inventario óptimo</h1>
+        <p>Puedes crear una cuenta exclusiva para organizar y gestionar tus productos o almacenes. Desde la organización hasta el análisis de gráficos de ventas, tendrás todo lo necesario para llevar un control completo de tu negocio.</p>
+      </div>
+    </div>
+
+    <div class="box4 box">
+      <div class="text-box">
+        <h1>Amplia tu alcance a nuevos mercados importando o exportando</h1>
+        <p>Conectamos importadores y exportadores para operaciones internacionales seguras. Mantenemos parte del dinero hasta que ambas partes estén contentas con la entrega, asegurando transacciones confiables.</p>
+      </div>
+      <img src="/icons/internacional.png" alt="">
+    </div>
+  </section>
+
+
+  <section class="back-blue">
+    <div class="tittle-conect">
+      <h1>Conecta tu cuenta Expresify para comenzar</h1>
+  </div>
+  <section class="img-conected">
+      
+      <!-- <div class="text">
+      </div> -->
+      <div class="box-master">
+          <div class="box box-img1">
+              <img src="/img/shopify.png" alt="">
+              <button>Shopify</button>
+          </div>
+
+
+          <div class="box box-img2">
+              <img src="/img/amazon.png" alt="">
+              <button>Amazon</button>
+          </div>
+
+
+          <div class="box box-img3">
+              <img src="/img/alibaba.png" alt="">
+              <button>Alibaba</button>
+          </div>
+
+              <div class="box box-img4">
+                  <img src="/img/wix.png" alt="">
+                  <button>Wix</button>
+              </div>
+
+
+              <div class="box box-img5">
+                  <img src="/img/woocomerce.png" alt="">
+                  <button>Woocomerce</button>
+              </div>
+
+
+              <div class="box box-img6">
+                  <img src="/img/ecwid.png" alt="">
+                  <button>Ecwid</button>
+          </div>
+      </div>
+  </section>
+
+  <section class="contact-section">
+    <div class="contact-container">
+      <h2>Contacto</h2>
+      <p>Ingresa tu correo para ponerte en contacto con nosotros:</p>
+      <form id="contact-form">
+        <input type="email" id="email" placeholder="Tu correo electrónico" required>
+        <button type="submit">Enviar</button>
+      </form>
+    </div>
+  </section>
+
+  <%- include("partials/footer.ejs") %>
+
+
+  </main>
+  <script>
+    let prevScrollpos = window.pageYOffset;
+window.onscroll = function() {
+  let currentScrollPos = window.pageYOffset;
+  if (prevScrollpos > currentScrollPos) {
+    document.querySelector('.sticky-nav').style.top = '0';
+  } else {
+    document.querySelector('.sticky-nav').style.top = '-100px';
+  }
+  prevScrollpos = currentScrollPos;
+}
+
+  </script>
+</body>
+</html>

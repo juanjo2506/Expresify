@@ -1,0 +1,171 @@
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    font-family: sans-serif;
+}
+main{
+    background-color: #f4f4f4;
+}
+
+
+main .cardsMetrics .contentCards{
+    display: flex;
+    justify-content: center;
+}
+
+main .cardsMetrics .contentCards .box{
+    align-items: center;
+    margin: 2rem;
+    padding: 1rem;
+    width: 18rem;
+    height: 8rem;
+    border-radius: 1.8rem;
+    background-color: #f7f7f7;
+    box-shadow: 0 4px 9px #c0c0c09f;
+}
+
+
+main .cardsMetrics .contentCards .box h1{
+    font-size: 1.2rem;
+}
+
+
+
+main .cardsMetrics .contentCards .colorCardText{
+    align-items: center;
+    width: 100%;
+    height: 8px;
+    border-radius: 5rem;
+}
+
+
+main .mainChart{
+    justify-content: center;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+main .mainChart .titleMainChart{
+    display: flex;
+    justify-content: center;
+    margin-bottom: 1.2rem;
+    padding: 2rem;
+    width: 100%;
+    border-radius: 1.6rem;
+    background-color: #292929;
+    color: #e9e9e9;
+    box-shadow: 0 4px 9px #818181;
+}
+main .mainChart .chartComplete{
+    background-color: #ffffff;
+    padding: 1rem;
+    border-radius: 1.8rem;
+    box-shadow: 0 4px 9px #c0c0c09f;
+    justify-content: center;
+}
+
+
+
+#chartBarOne{
+    align-items: center;
+    width: 60rem;
+}
+
+#myChart{
+    justify-content: center;
+    width: 100%;
+}
+
+main .mainChartCustoms{
+    display: flex;
+    padding-left: 5rem;
+    padding-right: 5rem;
+    padding-bottom: 2rem;
+    justify-content: space-around;
+    align-items: center;
+}
+
+
+
+
+
+main .boxCustomerMain{
+    margin-top: 5rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding-bottom: 5rem;
+    /* color: #6e71f4; */
+}
+
+main .boxCustomerMain .customerBox{
+    display: flex;
+    flex-direction: column;
+    width: 20rem;
+    border-radius: 1rem;
+    background-color: #ffffff;
+    height: 38rem;
+    overflow-x: auto;
+    box-shadow: 0 4px 9px #c0c0c09f;
+}
+
+main .boxCustomerMain .customerBox::-webkit-scrollbar{
+    width: 0;
+}
+
+
+main .boxCustomerMain .customerBox .titleCustom{
+    background-color: #292929;
+    padding: 2rem;
+    border-radius: 1rem 1rem 0 0;
+    color: #f7f7f7;
+    z-index: auto;
+}
+
+
+main .boxCustomerMain .customerBox  .customer{
+    padding: 1.5rem;
+    align-items: center;
+    display: flex;
+    color: #434343;
+}
+
+main .boxCustomerMain .customerBox  .customer:hover{
+    background-color: #c5c5c5;
+    transition: 0.2s;
+    color: #313131;
+}
+
+main .boxCustomerMain .customerBox  .customer img{
+    width: 35px;
+}
+
+main .boxCustomerMain .customerBox  .customer .textCustomer{
+    margin-left: 1.4rem;
+}
+
+.textCustomer p{
+    font-size: 14px;
+}
+
+main .chartsTypes{
+    padding-left: 6rem;
+    padding-right: 6rem;
+}
+
+
+main .chartsTypes .chartType {
+    width: 23rem;
+    padding: 2rem;
+    background-color: #ffffff;
+    border-radius: 1.4rem;
+    box-shadow: 0 4px 9px #a7a7a7;
+    margin-bottom: 9rem;
+}
+
+main .chartsTypes .listchart{
+    display: flex;
+    justify-content: space-around;
+}
