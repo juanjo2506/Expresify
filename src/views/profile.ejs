@@ -46,9 +46,9 @@
               <!-- Cambio en el enlace para visualizar detalles del producto -->
               <a href="/products/<%= product.id %>">
                   <li>
-                      <img src="/uploads/<%= product.image %>" alt="<%= product.title %> Image">
+                      <img src="/img/products/<%= product.productImage %>" alt="<%= product.title %> Image">
                       <h1><%= product.name %></h1>
-                      <!-- <p><%= product.description %></p> -->
+                      <p><%= product.description %> </p>
                       <h3>$<%= product.price %> USD</h3>
                       <!-- Botones de eliminar y editar -->
                       <form action="/products/<%= product.id %>?_method=DELETE" method="POST" style="display: inline;">

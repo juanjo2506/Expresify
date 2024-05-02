@@ -1,10 +1,19 @@
 const {validationResult} = require("express-validator");
+const fs = require("fs")
+const db = require("../../database/models")
 
 const profileController = {
 
-  homeProfile: (req, res) => {
-    const products = global.products;
-    res.render('profile', { products });
+  homeProfile: async (req, res) => {
+    try{
+      const products = await db.Products.findAll();
+      res.render('profile', { products });
+
+    }catch (error) {
+      // Handle errors
+      console.error('Error fetching data:', error);
+      res.status(500).send('Internal Server Error');
+  }
   },
 
     register: (req, res) => {
